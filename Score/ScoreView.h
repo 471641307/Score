@@ -13,4 +13,5 @@
 @property (nonatomic) int score; /**<分数 */
 
 - (void)timerFire;
+- (void)reset;
 @end

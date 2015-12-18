@@ -50,6 +50,15 @@
     timer = [NSTimer scheduledTimerWithTimeInterval: 0.01 target:self selector:@selector(transformAction) userInfo: nil repeats: YES];
 }
 
+- (void)reset{
+    time = 0;
+    maxTime = 0;
+    addingScore = 0;
+    angle = 3.9; //对应起点0的角度
+    CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI * 1.24);
+    _arrowView.transform = transform;
+}
+
 - (void)setScore:(int)score{
     _score = score;
     [self setMaxAngle];
